@@ -15,7 +15,7 @@ Three AI-powered APIs for developers, listed on RapidAPI marketplace.
 Pass your own [Anthropic API key](https://console.anthropic.com/) via the `X-Api-Key` header. This gives you full control over usage and costs.
 
 ```bash
-curl -X POST https://your-api.vercel.app/api/v1/readme \
+curl -X POST https://rapidapi-service.vercel.app/api/v1/readme \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: sk-ant-your-key-here" \
   -d '{"repoUrl": "https://github.com/facebook/react"}'
@@ -27,19 +27,19 @@ Without `X-Api-Key`, the server's configured `ANTHROPIC_API_KEY` is used (if set
 
 ```bash
 # Generate README (BYOK)
-curl -X POST https://your-api.vercel.app/api/v1/readme \
+curl -X POST https://rapidapi-service.vercel.app/api/v1/readme \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: sk-ant-your-key-here" \
   -d '{"repoUrl": "https://github.com/facebook/react"}'
 
 # Code review
-curl -X POST https://your-api.vercel.app/api/v1/review \
+curl -X POST https://rapidapi-service.vercel.app/api/v1/review \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: sk-ant-your-key-here" \
   -d '{"code": "function add(a,b){return a+b}", "language": "javascript"}'
 
 # Generate tests
-curl -X POST https://your-api.vercel.app/api/v1/test \
+curl -X POST https://rapidapi-service.vercel.app/api/v1/test \
   -H "Content-Type: application/json" \
   -H "X-Api-Key: sk-ant-your-key-here" \
   -d '{"code": "def add(a, b): return a + b", "language": "python"}'
@@ -61,7 +61,7 @@ Set these environment variables in Vercel dashboard:
 ## List on RapidAPI
 
 ### Step 1: Deploy to Vercel and note your URL
-e.g. `https://ai-code-tools-api.vercel.app`
+e.g. `https://rapidapi-service.vercel.app`
 
 ### Step 2: Create a RapidAPI account
 Go to [rapidapi.com](https://rapidapi.com) → Sign up as a provider
@@ -70,7 +70,7 @@ Go to [rapidapi.com](https://rapidapi.com) → Sign up as a provider
 1. Go to **My APIs** → **Add New API**
 2. **API name:** `AI Code Tools` (or per-API: `README Generator API`)
 3. **Category:** `AI, Machine Learning`
-4. **Base URL:** your Vercel URL
+4. **Base URL:** `https://rapidapi-service.vercel.app`
 
 ### Step 4: Configure endpoints
 
