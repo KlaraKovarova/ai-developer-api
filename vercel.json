@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/api/v1/readme/route.ts": { "maxDuration": 60 },
+    "app/api/v1/review/route.ts": { "maxDuration": 30 },
+    "app/api/v1/test/route.ts": { "maxDuration": 30 }
+  }
+}
